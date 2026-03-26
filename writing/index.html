@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing — umjo.me</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=DM+Sans:wght@400;500&display=swap');
+    :root {
+      --fg: #1a1a1a; --fg-dim: #6b6b6b; --bg: #faf9f7;
+      --rule: #e0ddd8;
+      --serif: 'Newsreader', Georgia, serif;
+      --sans: 'DM Sans', -apple-system, sans-serif;
+      --max-w: 620px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --fg: #e8e6e1; --fg-dim: #8a8a8a; --bg: #151413; --rule: #2a2927; }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--sans); font-size: 16px; line-height: 1.65; color: var(--fg); background: var(--bg); -webkit-font-smoothing: antialiased; }
+    .site { max-width: var(--max-w); margin: 0 auto; padding: 4rem 1.5rem 6rem; }
+    nav { display: flex; align-items: baseline; gap: 1.5rem; margin-bottom: 4rem; }
+    nav .logo { font-family: var(--serif); font-size: 1.1rem; font-weight: 500; color: var(--fg); text-decoration: none; margin-right: auto; }
+    nav a { font-size: 0.9rem; color: var(--fg-dim); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--fg); }
+    nav a.active { color: var(--fg); }
+    h1 { font-family: var(--serif); font-size: 1.75rem; font-weight: 400; margin-bottom: 2rem; }
+    .item { display: flex; align-items: baseline; gap: 1rem; padding: 0.55rem 0; border-bottom: 1px solid var(--rule); text-decoration: none; color: var(--fg); transition: opacity 0.2s; }
+    .item:first-of-type { border-top: 1px solid var(--rule); }
+    .item:hover { opacity: 0.6; }
+    .item .date { font-size: 0.82rem; color: var(--fg-dim); white-space: nowrap; min-width: 5.5rem; font-variant-numeric: tabular-nums; }
+    .item .title { font-size: 0.95rem; }
+    footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--rule); display: flex; gap: 1.25rem; flex-wrap: wrap; }
+    footer a { font-size: 0.85rem; color: var(--fg-dim); text-decoration: none; transition: color 0.2s; }
+    footer a:hover { color: var(--fg); }
+    @media (max-width: 480px) { .site { padding: 2.5rem 1.25rem 4rem; } nav { margin-bottom: 3rem; } .item { flex-direction: column; gap: 0.15rem; } .item .date { min-width: unset; } }
+  </style>
+</head>
+<body>
+  <div class="site">
+    <nav>
+      <a href="/" class="logo">umjo.me</a>
+      <a href="/writing" class="active">Writing</a>
+      <a href="/projects">Projects</a>
+      <a href="/about">About</a>
+    </nav>
+
+    <h1>Writing</h1>
+
+    <a class="item" href="/writing/first-post">
+      <span class="date">2026 Mar</span>
+      <span class="title">Your first blog post goes here</span>
+    </a>
+    <a class="item" href="/writing/on-building">
+      <span class="date">2026 Feb</span>
+      <span class="title">On building things that last</span>
+    </a>
+    <a class="item" href="/writing/hello-world">
+      <span class="date">2026 Jan</span>
+      <span class="title">Hello, world</span>
+    </a>
+
+    <footer>
+      <a href="https://github.com/">GitHub</a>
+      <a href="https://twitter.com/">Twitter</a>
+      <a href="https://linkedin.com/">LinkedIn</a>
+      <a href="mailto:hello@umjo.me">Email</a>
+      <a href="/feed.xml">RSS</a>
+    </footer>
+  </div>
+</body>
+</html>

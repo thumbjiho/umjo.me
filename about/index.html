@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — umjo.me</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=DM+Sans:wght@400;500&display=swap');
+    :root {
+      --fg: #1a1a1a; --fg-dim: #6b6b6b; --bg: #faf9f7;
+      --link: #1a1a1a; --link-hover: #555; --rule: #e0ddd8;
+      --serif: 'Newsreader', Georgia, serif;
+      --sans: 'DM Sans', -apple-system, sans-serif;
+      --max-w: 620px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #e8e6e1; --fg-dim: #8a8a8a; --bg: #151413;
+        --link: #e8e6e1; --link-hover: #aaa; --rule: #2a2927;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--sans); font-size: 16px; line-height: 1.65;
+      color: var(--fg); background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+    .site { max-width: var(--max-w); margin: 0 auto; padding: 4rem 1.5rem 6rem; }
+    nav { display: flex; align-items: baseline; gap: 1.5rem; margin-bottom: 4rem; }
+    nav .logo { font-family: var(--serif); font-size: 1.1rem; font-weight: 500; color: var(--fg); text-decoration: none; margin-right: auto; }
+    nav a { font-size: 0.9rem; color: var(--fg-dim); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--fg); }
+    nav a.active { color: var(--fg); }
+    h1 { font-family: var(--serif); font-size: 1.75rem; font-weight: 400; margin-bottom: 2rem; }
+    .content p { margin-bottom: 1.25rem; color: var(--fg-dim); max-width: 55ch; }
+    .content a { color: var(--fg); text-decoration-color: var(--rule); text-underline-offset: 3px; }
+    .content a:hover { text-decoration-color: var(--fg); }
+    footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--rule); display: flex; gap: 1.25rem; flex-wrap: wrap; }
+    footer a { font-size: 0.85rem; color: var(--fg-dim); text-decoration: none; transition: color 0.2s; }
+    footer a:hover { color: var(--fg); }
+    @media (max-width: 480px) { .site { padding: 2.5rem 1.25rem 4rem; } nav { margin-bottom: 3rem; } }
+  </style>
+</head>
+<body>
+  <div class="site">
+    <nav>
+      <a href="/" class="logo">umjo.me</a>
+      <a href="/writing">Writing</a>
+      <a href="/projects">Projects</a>
+      <a href="/about" class="active">About</a>
+    </nav>
+
+    <h1>About</h1>
+
+    <div class="content">
+      <p>
+        Hi — I'm [Your Name]. I'm based in Seoul, South Korea.
+      </p>
+      <p>
+        I'm interested in [your interests here]. I've worked at
+        [places you've worked] and studied [what you studied] at [where].
+      </p>
+      <p>
+        This site is where I collect my writing and projects.
+        It's intentionally simple — just HTML, hosted from a Mac Mini
+        in my home.
+      </p>
+      <p>
+        You can reach me at <a href="mailto:hello@umjo.me">hello@umjo.me</a>.
+      </p>
+    </div>
+
+    <footer>
+      <a href="https://github.com/">GitHub</a>
+      <a href="https://twitter.com/">Twitter</a>
+      <a href="https://linkedin.com/">LinkedIn</a>
+      <a href="mailto:hello@umjo.me">Email</a>
+      <a href="/feed.xml">RSS</a>
+    </footer>
+  </div>
+</body>
+</html>
