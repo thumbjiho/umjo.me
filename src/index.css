@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=DM+Sans:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --fg: #1a1a1a;
+  --fg-dim: #6b6b6b;
+  --bg: #faf9f7;
+  --accent: #222;
+  --link: #1a1a1a;
+  --link-hover: #555;
+  --rule: #e0ddd8;
+}
+
+:root.dark {
+  --fg: #e8e6e1;
+  --fg-dim: #8a8a8a;
+  --bg: #151413;
+  --accent: #e8e6e1;
+  --link: #e8e6e1;
+  --link-hover: #aaa;
+  --rule: #2a2927;
+}
+
+body {
+  font-family: "DM Sans", -apple-system, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
