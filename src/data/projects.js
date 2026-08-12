@@ -1,0 +1,43 @@
+export const projects = [
+  {
+    date: "2026",
+    title: "Best-of-N Series",
+    description: "다전제 경기의 승패 흐름을 시각적으로 탐색하는 인터랙티브 도구",
+    tone: "green",
+    image: "/bo5-preview.png",
+    imagePosition: "object-top",
+    href: "https://bo5.umjo.me/",
+  },
+  {
+    date: "2026",
+    title: "JBL",
+    description: "피네스와 T-스핀, 경쟁적인 타이밍을 담은 모던 블록 스태커",
+    tone: "blue",
+    image: "/jbl-preview.png",
+    href: "https://jbl.umjo.me/",
+  },
+  {
+    date: "2026",
+    title: "대기패 계산기",
+    description: "마작 패를 입력해 완성까지 필요한 대기패를 계산하는 도구",
+    tone: "orange",
+    preview: "mahjong",
+    href: "https://ma.machete.club/",
+  },
+  {
+    date: "2026",
+    title: "HSK Quiz Maker",
+    description: "HSK 1–4급의 1,200개 단어를 퀴즈로 학습하는 앱",
+    tone: "green",
+    image: "/hskq-preview.png",
+    href: "https://hskq.umjo.me/",
+  },
+  {
+    date: "2026",
+    title: "초성배틀",
+    description: "체스 타이머와 챌린지를 활용하는 2인용 대면 초성 단어 게임",
+    tone: "blue",
+    image: "/cs-preview.svg",
+    href: "https://cs.umjo.me/",
+  },
+];
