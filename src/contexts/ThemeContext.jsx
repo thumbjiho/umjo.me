@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect, useRef } from "react";
 
 const ThemeContext = createContext();
 
@@ -12,6 +12,7 @@ function getInitialTheme() {
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(getInitialTheme);
+  const transitionTimer = useRef(null);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -23,8 +24,22 @@ export function ThemeProvider({ children }) {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  const toggleTheme = () =>
+  useEffect(
+    () => () => window.clearTimeout(transitionTimer.current),
+    [],
+  );
+
+  const toggleTheme = () => {
+    const root = document.documentElement;
+    root.classList.add("theme-transition");
+
+    window.clearTimeout(transitionTimer.current);
+    transitionTimer.current = window.setTimeout(() => {
+      root.classList.remove("theme-transition");
+    }, 400);
+
     setTheme((t) => (t === "dark" ? "light" : "dark"));
+  };
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>

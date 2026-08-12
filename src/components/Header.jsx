@@ -6,14 +6,20 @@ export default function Header() {
   const { theme, toggleTheme } = useTheme();
 
   const navLinks = [
-    { to: "/writing", label: "글쓰기" },
+    { to: "/writing", label: "블로그" },
     { to: "/projects", label: "프로젝트" },
+    { to: "/gears", label: "장비" },
+    { to: "/watching", label: "매체" },
     { to: "/about", label: "소개" },
   ];
 
   return (
     <nav className="flex items-center gap-6 mb-16 max-sm:mb-12">
-      <Link to="/" className="font-serif text-[1.1rem] font-medium text-fg no-underline mr-auto">
+      <Link
+        to="/"
+        style={{ fontFamily: '"Newsreader", Georgia, serif' }}
+        className="text-[1.1rem] font-medium text-fg no-underline mr-auto"
+      >
         umjo.me
       </Link>
       {navLinks.map(({ to, label }) => (
