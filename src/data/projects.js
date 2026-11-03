@@ -1,6 +1,29 @@
 export const projects = [
   {
     date: "2026",
+    title: "스컬프트",
+    description: "찰흙으로 빚은 작품에 가짜 제목을 붙여 서로를 속이는 할로윈 파티 게임",
+    tone: "orange",
+    image: "/skullpt-preview.jpg",
+    href: "https://skullpt.umjo.me/",
+  },
+  {
+    date: "2026",
+    title: "화면비 3D 프린트 교구",
+    description: "필름 포맷과 국내 IMAX관 스크린을 손으로 비교하는 화면비 수업용 3D 프린트 모델",
+    tone: "orange",
+    image: "/stl-preview.png",
+    imagePosition: "object-top",
+  },
+  {
+    date: "2026",
+    title: "dafaux.ai",
+    description: "아는 척만 하는 가짜 AI 채팅 서비스",
+    tone: "green",
+    image: "/dafaux-preview.png",
+  },
+  {
+    date: "2026",
     title: "Best-of-N Series",
     description: "다전제 경기의 승패 흐름을 시각적으로 탐색하는 인터랙티브 도구",
     tone: "green",
