@@ -14,6 +14,7 @@ export const projects = [
     tone: "orange",
     image: "/stl-preview.png",
     imagePosition: "object-top",
+    href: "https://imax.umjo.me/",
   },
   {
     date: "2026",
@@ -21,6 +22,7 @@ export const projects = [
     description: "아는 척만 하는 가짜 AI 채팅 서비스",
     tone: "green",
     image: "/dafaux-preview.png",
+    href: "https://ai.umjo.me/",
   },
   {
     date: "2026",
