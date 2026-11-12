@@ -1,6 +1,14 @@
 export const projects = [
   {
     date: "2026",
+    title: "The Criterion Collection World",
+    description: "크라이테리온 컬렉션 커버 1,344장을 AI로 분석해 색·사람·구도·타이포그래피 지도로 다시 펼친 인터랙티브 아카이브",
+    tone: "blue",
+    image: "/ccw-preview.jpg",
+    href: "https://ccw.umjo.me/",
+  },
+  {
+    date: "2026",
     title: "스컬프트",
     description: "찰흙으로 빚은 작품에 가짜 제목을 붙여 서로를 속이는 할로윈 파티 게임",
     tone: "orange",
