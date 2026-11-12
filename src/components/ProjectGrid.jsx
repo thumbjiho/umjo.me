@@ -74,6 +74,25 @@ function ProjectPreview({ project }) {
   return <PlaceholderPreview tone={project.tone} />;
 }
 
+// 아웃링크 화살표: Lucide arrow-up-right(24 격자의 7–17, viewBox 5–19)를 글자의 절반 남짓 크기로,
+// 대문자 높이 가운데에 맞춘다. 끝과 이음은 둥글게, 선은 약 1px (ccw.umjo.me 와 같은 모양)
+function OutArrow() {
+  return (
+    <svg
+      viewBox="5 5 14 14"
+      aria-hidden="true"
+      className="ml-[0.3em] inline-block h-[0.62em] w-[0.62em] align-[0.05em] text-fg-dim opacity-70 transition-opacity group-hover:opacity-100"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M7 17 17 7M7 7h10v10" />
+    </svg>
+  );
+}
+
 export default function ProjectGrid({ projects }) {
   return (
     <div className="grid grid-cols-2 gap-x-5 gap-y-8 max-sm:grid-cols-1">
@@ -92,7 +111,7 @@ export default function ProjectGrid({ projects }) {
             <div className="flex items-baseline justify-between gap-3">
               <h3 className="text-[0.95rem] font-medium text-fg">
                 {project.title}
-                {project.href && <span className="ml-1.5 text-fg-dim">↗</span>}
+                {project.href && <OutArrow />}
               </h3>
               <span className="shrink-0 text-[0.78rem] text-fg-dim tabular-nums">
                 {project.date}
